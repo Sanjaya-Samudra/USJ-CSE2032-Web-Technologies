@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Care - Dog Hostel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm() {
+            const dogs = document.forms["hostelForm"]["dogs"].value;
+            const pups = document.forms["hostelForm"]["pups"].value;
+            const beds = document.forms["hostelForm"]["beds"].value;
+            if (!dogs || !pups || !beds || isNaN(dogs) || isNaN(pups) || isNaN(beds)) {
+                alert("All fields are required and must be digits.");
+                return false;
+            } else {
+                alert("Your Appointment has been recorded!!!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="../Practical Tutorial 03 images/image05.jpg" alt="pet-palm" width="50px" style="float: left;">
+            <p
+                style="font-weight: 200; color: white; display: inline; letter-spacing: 10px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                PET CARE</p>
+            <img src="../Practical Tutorial 03 images/image05.jpg" alt="pet-palm" width="50px" style="float: right;">
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dog-hostel-bg">
+        <div class="hostel-form-container">
+            <h2 class="hostel-styled-heading">
+                <span class="big-letter">D</span>og <span class="big-letter">H</span>ostel
+            </h2>
+            <form name="hostelForm" onsubmit="return validateForm()">
+                <label>Check In Date:<br><br><input type="date" name="checkin" required></label><br>
+                <label>Check Out Date:<br><br><input type="date" name="checkout" required></label><br>
+                <label>Dogs:<br><br><input type="number" name="dogs" value="1" required></label><br>
+                <label>Pups:<br><br><input type="number" name="pups" value="1" required></label><br>
+                <label>Beds:<br><br><input type="number" name="beds" value="1" required></label><br>
+                <center><input type="submit" value="BOOK NOW"></center>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <img src="../Practical Tutorial 03 images/image06.jpg" alt="Pet Care" class="red-border"
+                style="border-radius: 50%; height: 120px;">
+            <p style="font-family: cursive; color: white;"><b>P</b>ets are humanizing. They remind us we have an
+                obligation and responsibility to preserve and
+                nurture and care for all life.</p>
+        </div>
+        <div class="footer-section">
+            <h4 style="color: white;">Have A Question</h4>
+            <ul style="padding: 10px 20px; font-size: small; ">
+                <li style="padding: 5px;"><a style="color: white;" href="services.html">Services</a></li>
+                <li style="padding: 5px;"><a style="color: white;" href="dog-hostel.html">Dog Hostel</a></li>
+                <li style="padding: 5px;"><a style="color: white;" href="about.html">About Us</a></li>
+                <li style="padding: 5px;"><a style="color: white;" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section-lo">
+            <h4 style="color: white;">Information</h4>
+            <ul style="padding: 10px 20px; font-size: small; ">
+                <li style="padding: 5px; color: white;">📍 &nbsp; Pet Care (Pvt) Ltd, 123, 1st Floor, Dalugama,
+                    Kelaniya.
+                </li>
+                <li style="padding: 5px; color: white;">📞 Telephone: 0112 999999 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Fax:
+                    0094 621 382</li>
+                <li style="padding: 5px; color: white;">📩 info@petcare.com</li>
+            </ul>
+        </div>
+        <div class="footer-section map">
+            <iframe src="https://www.google.com/maps?q=Kelaniya,Sri+Lanka&output=embed"></iframe>
+        </div>
+    </footer>
+    <div class="bottom-bar">
+        © 2023 <strong>Pet Care</strong> 11600. Designed By Team PETCARE
+    </div>
+</body>
+
+</html>
