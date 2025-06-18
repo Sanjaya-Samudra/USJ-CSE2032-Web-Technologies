@@ -1,0 +1,87 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color:rgb(184, 182, 182);
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
+.nav-left .logo {
+  height: 40px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-center button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 8px 35px 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.background-img {
+  position: relative;
+  background-image: url(images\\parallax\\rack.jpg); 
+  background-size: cover;
+  background-position: ;
+  height: 350px; /* adjust as needed */
+  padding-top: 40px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20%; /* push down slightly from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.overlay-text h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.overlay-text p {
+  font-size: 1.2em;
+}
