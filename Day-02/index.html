@@ -1,68 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery - Visual Poetry</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+    </div>
 
     <!-- Top Navigation -->
     <nav class="top-nav">
-        <a href="#"><img src="" alt="logo" class="logo"></a>
-        <h2>Nav Bar</h2>
-        <div class="nav-buttons">
-            <button>Home</button>
-            <button>Contact Us</button>
-            <button>About Us</button>
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <div class="logo-circle">
+                    <span class="logo-text">EG</span>
+                </div>
+                <h2 class="nav-title">Gallery</h2>
+            </a>
+            <div class="nav-buttons">
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn">Collections</button>
+                <button class="nav-btn">About</button>
+                <button class="nav-btn contact-btn">Contact</button>
+            </div>
         </div>
     </nav>
 
-    <!-- Grey Full-Width Header -->
-    <header class="page-header">Header</header>
+    <!-- Hero Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 class="header-title">Visual Poetry</h1>
+            <p class="header-subtitle">Where moments become eternal through the lens of artistry</p>
+            <div class="header-decoration"></div>
+        </div>
+        <div class="header-overlay"></div>
+    </header>
 
     <!-- Main Layout -->
     <div class="layout">
+        <!-- Category Selector -->
+        <input type="radio" name="category" id="nature" checked>
+        <input type="radio" name="category" id="architecture">
+        <input type="radio" name="category" id="portraits">
+        <input type="radio" name="category" id="abstract">
 
-        <!-- Sidebar + Content Together -->
-        <input type="radio" name="menu" id="menu1" checked>
-        <input type="radio" name="menu" id="menu2">
-        <input type="radio" name="menu" id="menu3">
-        <input type="radio" name="menu" id="menu4">
-
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <label for="menu1">Menu 1</label>
-            <label for="menu2">Menu 2</label>
-            <label for="menu3">Menu 3</label>
-            <label for="menu4">Menu 4</label>
+            <div class="sidebar-header">
+                <h3>Collections</h3>
+            </div>
+            <div class="category-menu">
+                <label for="nature" class="category-item nature-cat">
+                    <span class="category-icon">🌿</span>
+                    <span class="category-name">Nature's Whispers</span>
+                    <div class="category-glow"></div>
+                </label>
+                <label for="architecture" class="category-item architecture-cat">
+                    <span class="category-icon">🏛️</span>
+                    <span class="category-name">Urban Symphony</span>
+                    <div class="category-glow"></div>
+                </label>
+                <label for="portraits" class="category-item portraits-cat">
+                    <span class="category-icon">👤</span>
+                    <span class="category-name">Soul Portraits</span>
+                    <div class="category-glow"></div>
+                </label>
+                <label for="abstract" class="category-item abstract-cat">
+                    <span class="category-icon">🎨</span>
+                    <span class="category-name">Abstract Dreams</span>
+                    <div class="category-glow"></div>
+                </label>
+            </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="content">
-            <section class="gallery">
-                <h2>Image Gallery</h2>
-
-                <div class="images image-set1">
-                    <img src="Wallpapers/pexels-asadphoto-1450360.jpg" alt="img1">
-                    <img src="Wallpapers/pexels-bri-schneiter-28802-346529.jpg" alt="img2">
+            <!-- Nature Gallery -->
+            <section class="gallery nature-gallery">
+                <div class="gallery-header">
+                    <h2>Nature's Whispers</h2>
+                    <p>Capturing the ethereal beauty of the natural world</p>
                 </div>
-
-                <div class="images image-set2">
-                    <img src="Wallpapers/pexels-bri-schneiter-28802-346529.jpg" alt="img3">
-                    <img src="Wallpapers/pexels-asadphoto-1450360.jpg" alt="img4">
+                <div class="masonry-grid">
+                    <div class="image-card tall">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+                            alt="Mountain Vista">
+                        <div class="image-overlay">
+                            <h4>Mountain Vista</h4>
+                            <p>Morning light dancing on peaks</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
+                            alt="Forest Path">
+                        <div class="image-overlay">
+                            <h4>Forest Path</h4>
+                            <p>Journey into the unknown</p>
+                        </div>
+                    </div>
+                    <div class="image-card wide">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+                            alt="Ocean Waves">
+                        <div class="image-overlay">
+                            <h4>Ocean Waves</h4>
+                            <p>Eternal rhythm of the sea</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&q=80"
+                            alt="Sunset Lake">
+                        <div class="image-overlay">
+                            <h4>Sunset Lake</h4>
+                            <p>Mirror of golden hour</p>
+                        </div>
+                    </div>
+                    <div class="image-card tall">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80"
+                            alt="Misty Valley">
+                        <div class="image-overlay">
+                            <h4>Misty Valley</h4>
+                            <p>Whispers of morning fog</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+                            alt="Ancient Tree">
+                        <div class="image-overlay">
+                            <h4>Ancient Tree</h4>
+                            <p>Guardian of time</p>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="images image-set3">
-                    <img src="Wallpapers/pexels-asadphoto-1450360.jpg" alt="img5">
-                    <img src="Wallpapers/pexels-bri-schneiter-28802-346529.jpg" alt="img6">
+            <!-- Architecture Gallery -->
+            <section class="gallery architecture-gallery">
+                <div class="gallery-header">
+                    <h2>Urban Symphony</h2>
+                    <p>Where human creativity meets sky and stone</p>
                 </div>
+                <div class="masonry-grid">
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80"
+                            alt="Modern Skyline">
+                        <div class="image-overlay">
+                            <h4>Modern Skyline</h4>
+                            <p>Glass towers reaching dreams</p>
+                        </div>
+                    </div>
+                    <div class="image-card tall">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                            alt="Gothic Cathedral">
+                        <div class="image-overlay">
+                            <h4>Gothic Cathedral</h4>
+                            <p>Stone poetry in light</p>
+                        </div>
+                    </div>
+                    <div class="image-card wide">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80"
+                            alt="Bridge Reflection">
+                        <div class="image-overlay">
+                            <h4>Bridge Reflection</h4>
+                            <p>Engineering as art</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                            alt="Spiral Staircase">
+                        <div class="image-overlay">
+                            <h4>Spiral Staircase</h4>
+                            <p>Ascending infinity</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80"
+                            alt="Urban Geometry">
+                        <div class="image-overlay">
+                            <h4>Urban Geometry</h4>
+                            <p>Patterns in concrete</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <div class="images image-set4">
-                    <img src="Wallpapers/pexels-bri-schneiter-28802-346529.jpg" alt="img7">
-                    <img src="Wallpapers/pexels-asadphoto-1450360.jpg" alt="img8">
+            <!-- Portraits Gallery -->
+            <section class="gallery portraits-gallery">
+                <div class="gallery-header">
+                    <h2>Soul Portraits</h2>
+                    <p>Windows to the human experience</p>
+                </div>
+                <div class="masonry-grid">
+                    <div class="image-card">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/02/11/08/monk-1791113_640.jpg"
+                            alt="Contemplation">
+                        <div class="image-overlay">
+                            <h4>Contemplation</h4>
+                            <p>Quiet moments of reflection</p>
+                        </div>
+                    </div>
+                    <div class="image-card tall">
+                        <img src="https://cdn.pixabay.com/photo/2018/04/13/21/24/lion-3317670_640.jpg"
+                            alt="Expression">
+                        <div class="image-overlay">
+                            <h4>Expression</h4>
+                            <p>The language of the soul</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://cdn.pixabay.com/photo/2021/02/12/09/36/sunflowers-6007847_640.jpg"
+                            alt="Golden Hour">
+                        <div class="image-overlay">
+                            <h4>Golden Hour</h4>
+                            <p>Light painting stories</p>
+                        </div>
+                    </div>
+                    <div class="image-card wide">
+                        <img src="https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_640.jpg"
+                            alt="Silhouette">
+                        <div class="image-overlay">
+                            <h4>Silhouette</h4>
+                            <p>Mystery in shadows</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abstract Gallery -->
+            <section class="gallery abstract-gallery">
+                <div class="gallery-header">
+                    <h2>Abstract Dreams</h2>
+                    <p>Beyond reality lies imagination</p>
+                </div>
+                <div class="masonry-grid">
+                    <div class="image-card wide">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80"
+                            alt="Color Flow">
+                        <div class="image-overlay">
+                            <h4>Color Flow</h4>
+                            <p>Liquid emotions in motion</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://cdn.pixabay.com/photo/2018/01/19/11/13/abstract-3092201_640.jpg"
+                            alt="Geometric Harmony">
+                        <div class="image-overlay">
+                            <h4>Geometric Harmony</h4>
+                            <p>Mathematics meets beauty</p>
+                        </div>
+                    </div>
+                    <div class="image-card tall">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80"
+                            alt="Light Patterns">
+                        <div class="image-overlay">
+                            <h4>Light Patterns</h4>
+                            <p>Dancing photons captured</p>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://cdn.pixabay.com/photo/2013/09/18/20/57/symphony-orchestra-183608_640.jpg"
+                            alt="Texture Symphony">
+                        <div class="image-overlay">
+                            <h4>Texture Symphony</h4>
+                            <p>Touch made visible</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <!-- Footer -->
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 My Gallery. Where art transcends reality.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
